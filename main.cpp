@@ -31,24 +31,24 @@ class colectie {
 public:
     friend std::ostream &operator<<(std::ostream &os, const colectie &colectie) {
         os << "titlu: " << colectie.titlu << ", cod: " << colectie.cod << ", opere: " << "\n";
-        for(const auto& opera_arta : colectie.opere)
+        for(const auto &opera_arta : colectie.opere)
             os << "\t" << opera_arta;
         return os;
     }
 
-    void adauga(opera_arta opera_arta) {
+    void adauga(opera_arta const &opera_arta) {
         opere.push_back(opera_arta);
     }
 
     colectie(const std::string &titlu, int cod) : titlu(titlu), cod(cod) {}
 
-    colectie(const colectie& copie) {
+    colectie(const colectie &copie) {
         this->titlu = copie.titlu;
         this->cod   = copie.cod;
         this->opere = copie.opere;
     }
 
-    colectie& operator=(const colectie& copie) {
+    colectie &operator=(const colectie &copie) {
         if(this != &copie) {
             this->titlu = copie.titlu;
             this->cod   = copie.cod;
@@ -68,18 +68,18 @@ class muzeu {
 public:
     friend std::ostream &operator<<(std::ostream &os, const muzeu &muzeu) {
         os << "colectii: " << "\n";
-        for(const auto& colectie : muzeu.colectii)
+        for(const auto &colectie : muzeu.colectii)
             os << colectie;
         return os;
     }
 
-    void adauga(colectie colectie) {
+    void adauga(colectie const &colectie) {
         colectii.push_back(colectie);
     }
 };
 
 
-int main (){
+int main () {
     muzeu M;
     colectie C1{"Din trecut",1};
     colectie C2{"Arta contemporana",2};
