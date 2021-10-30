@@ -81,16 +81,18 @@ public:
 
 int main (){
     muzeu M;
-    colectie C1{"Arta contemporana",1};
-    colectie C2{"Photorealism",2};
-    opera_arta o1{"Toamna","Miha","pictura","photorealism", 2020};
-    opera_arta o2{"Vara","Miha","sculptura","photorealism", 2021};
-    opera_arta o3{"Primavara","Miha","desen","photorealism", 2021};
-    opera_arta o4{"Lala","Miha","desen","photorealism", 2021};
+    colectie C1{"Din trecut",1};
+    colectie C2{"Arta contemporana",2};
+    opera_arta o1{"Camp cu maci","Claude Monet","pictura","impresionism", 1870};
+    opera_arta o2{"Floarea soarelui","Vincent Van Gogh","pictura","post-impresionism", 1888};
+    opera_arta o3{"Pieta","Michelangelo Buonarroti","sculptura","renascentism", 1499};
+    opera_arta o4{"Cainele balon","Jeff Koons","sculptura","arta contemporana", 1993};
+    opera_arta o5{"Flumequin","Damien Hirst","pictura","arta contemporana", 2007};
     C1.adauga(o1);
     C1.adauga(o2);
-    C2.adauga(o3);
+    C1.adauga(o3);
     C2.adauga(o4);
+    C2.adauga(o5);
     M.adauga(C1);
     M.adauga(C2);
     std::cout << M;
