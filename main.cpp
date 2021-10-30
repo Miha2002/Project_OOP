@@ -88,8 +88,8 @@ void detalii_colectie (colectie c){
 
 int main () {
     muzeu M;
-    colectie C1{"Din trecut",1};
-    colectie C2{"Arta contemporana",2};
+    colectie C1{"Din trecut",101};
+    colectie C2{"Arta contemporana",102};
 
     opera_arta o1{"Camp cu maci","Claude Monet","pictura","impresionism", 1870};
     opera_arta o2{"Floarea soarelui","Vincent Van Gogh","pictura","post-impresionism", 1888};
@@ -106,7 +106,7 @@ int main () {
     M.adauga(C1);
     M.adauga(C2);
 //    std::cout << M;
-    detalii_opera(o5);
-    detalii_colectie(C1);
+   detalii_opera(o1);
+    detalii_colectie(C2);
     return 0;
 }
