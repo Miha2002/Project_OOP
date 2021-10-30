@@ -79,7 +79,7 @@ public:
     }
 };
 
-//functii de afisare a detaliilor
+//functii de afisare a detaliilor pt o opera/ o colectie
 void detalii_opera (opera_arta a){
     std::cout << a << "\n";}
 
