@@ -21,6 +21,7 @@ public:
     opera_arta(const std::string &titlu, const std::string &artist, const std::string &categorie,
                const std::string &stil, int anPublicare) : titlu(titlu), artist(artist), categorie(categorie),
                                                            stil(stil), an_pub(anPublicare) {}
+
 };
 
 class colectie {
@@ -78,6 +79,12 @@ public:
     }
 };
 
+//functii de afisare a detaliilor
+void detalii_opera (opera_arta a){
+    std::cout << a << "\n";}
+
+void detalii_colectie (colectie c){
+    std::cout << c << "\n";}
 
 int main () {
     muzeu M;
@@ -98,6 +105,8 @@ int main () {
 
     M.adauga(C1);
     M.adauga(C2);
-    std::cout << M;
+//    std::cout << M;
+    detalii_opera(o5);
+    detalii_colectie(C1);
     return 0;
 }
