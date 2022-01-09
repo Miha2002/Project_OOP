@@ -1,5 +1,4 @@
 //
-// Created by Asus tuf on 1/9/2022.
 //
 
 #ifndef PROIECT_POO_COLECTIE_H

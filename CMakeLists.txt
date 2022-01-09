@@ -3,5 +3,4 @@ project(Proiect_POO)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(Proiect_POO
-        main.cpp)
+add_executable(Proiect_POO main.cpp opera_arta.cpp)
