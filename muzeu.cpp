@@ -18,7 +18,13 @@ void muzeu::adauga(const colectie &colectie) {
 }
 
 void muzeu::program() {
-    std::cout<< "Indiferent de zi, muzeul se deschide la ora 08:00 si se inchide la 22:00 !\n";
+    int x;
+    std::cout<< "In ce zi doriti sa vizitati?\n1-LUNI\n2-MARTI\n3-MIERCURI\n4-JOI\n5-VINERI\n6-SAMBATA\n7-DUMINICA\n";
+    std::cin>>x;
+    if(x==1)
+        std::cout<< "Muzeul este inchis in aceasta zi!\n";
+    else
+        std::cout<< "Muzeul este deschis de la ora 08:00 pana la 22:00!\n";
 }
 
 void muzeu::cost_bilete() {
@@ -36,7 +42,7 @@ void muzeu::cost_bilete() {
         cost=bilet*(x-y) + bilet*0.5*y;
         cost= cost * 0.90;
     }
-    if (g=1)
+    if (g==1)
         cost = cost + 100;
     std::cout<< "Pretul total al biletelor este: " << cost <<"RON\n\n";
 }

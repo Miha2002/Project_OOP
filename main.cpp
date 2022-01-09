@@ -1,8 +1,5 @@
 //Aplicatie Muzeu de arta
 
-#include <iostream>
-#include <string>
-#include <vector>
 #include "opera_arta.h"
 #include "colectie.h"
 #include "muzeu.h"
@@ -20,8 +17,6 @@ int main () {
     opera_arta o4{"Cainele balon","Jeff Koons","sculptura","arta contemporana", 1993,1};
     opera_arta o5{"Flumequin","Damien Hirst","pictura","arta contemporana", 2007,0};
 
-    sculptura s1();
-
     C1.adauga(o1);
     C1.adauga(o2);
     C1.adauga(o3);
@@ -31,8 +26,8 @@ int main () {
     M.adauga(C1);
     M.adauga(C2);
 //    std::cout << M;
-    o1.status();
+//    o1.status();
     M.program();
-    M.cost_bilete();
+//    M.cost_bilete();
     return 0;
 }
