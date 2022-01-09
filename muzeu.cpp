@@ -34,7 +34,7 @@ void muzeu::cost_bilete() {
     std::cin>> x;
     std::cout<< "Cati dintre acestia sunt copii?\n";
     std::cin>> y;
-    std::cout<< "Doriti ghid?\n NU-0\n DA-1\n";
+    std::cout<< "Doriti ghid?\nNU-0\nDA-1\n";
     std::cin>> g;
     if (x<10)
         cost=bilet*(x-y) + bilet*0.5*y;
