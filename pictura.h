@@ -4,7 +4,8 @@
 #ifndef PROIECT_POO_PICTURA_H
 #define PROIECT_POO_PICTURA_H
 
-
+#include <iostream>
+#include <string>
 
 class pictura : public opera_arta {
 

@@ -1,7 +1,6 @@
 //
 //
 
-#include <string>
 #include "opera_arta.h"
 #include "pictura.h"
 
