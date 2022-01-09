@@ -24,6 +24,7 @@ public:
     void status ();
 
     virtual std::shared_ptr<opera_arta> clone() const;
+
 };
 
 #endif //PROIECT_POO_OPERA_ARTA_H

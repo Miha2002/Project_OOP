@@ -9,8 +9,8 @@ std::ostream &operator<<(std::ostream &os, const colectie &colectie) {
     return os;
 }
 
-void colectie::adauga(const opera_arta &opera_arta) {
-    opere.push_back(opera_arta);
+void colectie::adauga(const opera_arta &opera_arta_) {
+    opere.push_back(opera_arta_.clone());
 }
 
 colectie::colectie(const std::string &titlu, int cod) : titlu(titlu), cod(cod) {}

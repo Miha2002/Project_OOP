@@ -21,4 +21,5 @@ void opera_arta::status() {
 
 std::shared_ptr<opera_arta> opera_arta::clone() const {
     return std::make_shared<opera_arta>(*this);
+
 }

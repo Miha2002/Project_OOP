@@ -20,6 +20,8 @@ int main () {
     opera_arta o4{"Cainele balon","Jeff Koons","sculptura","arta contemporana", 1993,1};
     opera_arta o5{"Flumequin","Damien Hirst","pictura","arta contemporana", 2007,0};
 
+    sculptura s1();
+
     C1.adauga(o1);
     C1.adauga(o2);
     C1.adauga(o3);
