@@ -28,8 +28,6 @@ int main () {
     M.adauga(C1);
     M.adauga(C2);
 //    std::cout << M;
-//    M.detalii_opera(o1);
-//    M.detalii_colectie(C2);
     M.program();
     M.cost_bilete();
     return 0;

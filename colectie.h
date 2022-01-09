@@ -3,6 +3,11 @@
 
 #ifndef PROIECT_POO_COLECTIE_H
 #define PROIECT_POO_COLECTIE_H
+
+#include <vector>
+#include <iostream>
+#include "opera_arta.h"
+
 class colectie {
     std::string titlu;
     int cod;
@@ -10,36 +15,17 @@ class colectie {
 
 
 public:
-    friend std::ostream &operator<<(std::ostream &os, const colectie &colectie) {
-        os << "titlu: " << colectie.titlu << ", cod: " << colectie.cod << ", opere: " << "\n";
-        for(const auto &opera_arta : colectie.opere)
-            os << "\t" << opera_arta;
-        return os;
-    }
+    friend std::ostream &operator<<(std::ostream &os, const colectie &colectie);
 
-    void adauga(opera_arta const &opera_arta) {
-        opere.push_back(opera_arta);
-    }
+    void adauga(opera_arta const &opera_arta);
 
-    colectie(const std::string &titlu, int cod) : titlu(titlu), cod(cod) {}
+    colectie(const std::string &titlu, int cod);
 
-    colectie(const colectie &copie) {
-        this->titlu = copie.titlu;
-        this->cod   = copie.cod;
-        this->opere = copie.opere;
-    }
+    colectie(const colectie &copie);
 
-    colectie &operator=(const colectie &copie) {
-        if(this != &copie) {
-            this->titlu = copie.titlu;
-            this->cod   = copie.cod;
-            this->opere = copie.opere;
-        }
-        return *this;
-    }
+    colectie &operator=(const colectie &copie);
 
-    ~colectie() {
-        std::cout << "destructor colectie\n";
-    }
+    ~colectie();
 };
+
 #endif //PROIECT_POO_COLECTIE_H
