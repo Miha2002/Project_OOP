@@ -15,6 +15,9 @@ void colectie::adauga(const opera_arta &opera_arta) {
 
 colectie::colectie(const std::string &titlu, int cod) : titlu(titlu), cod(cod) {}
 
+colectie::colectie(const std::string &titlu, int cod, const std::vector<std::shared_ptr<opera_arta>> &opere) : titlu(
+        titlu), cod(cod), opere(opere) {}
+
 colectie::colectie(const colectie &copie) {
     this->titlu = copie.titlu;
     this->cod   = copie.cod;

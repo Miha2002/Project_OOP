@@ -6,12 +6,13 @@
 
 #include <vector>
 #include <iostream>
+#include <memory>
 #include "opera_arta.h"
 
 class colectie {
     std::string titlu;
     int cod;
-    std::vector<opera_arta> opere;
+    std::vector<std::shared_ptr<opera_arta>> opere;
 
 
 public:
@@ -20,6 +21,8 @@ public:
     void adauga(opera_arta const &opera_arta);
 
     colectie(const std::string &titlu, int cod);
+
+    colectie(const std::string &titlu, int cod, const std::vector<std::shared_ptr<opera_arta>> &opere);
 
     colectie(const colectie &copie);
 

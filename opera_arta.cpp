@@ -12,3 +12,13 @@ opera_arta::opera_arta(const std::string &titlu, const std::string &artist, cons
                        const std::string &stil, int anPub, bool afisare) : titlu(titlu), artist(artist), stil(stil),
                                                                            an_pub(anPub), afisare(afisare) {}
 
+void opera_arta::status() {
+    if (afisare == 1)
+        std::cout<< "Opera '"<< titlu << "' este afisata\n";
+    else
+        std::cout<< "Opera '"<< titlu << "' nu este afisata\n";
+}
+
+std::shared_ptr<opera_arta> opera_arta::clone() const {
+    return std::make_shared<opera_arta>(*this);
+}

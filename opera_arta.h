@@ -6,6 +6,7 @@
 
 #include <string>
 #include <iostream>
+#include <memory>
 
 class opera_arta {
     std::string titlu;
@@ -20,12 +21,9 @@ public:
     opera_arta(const std::string &titlu, const std::string &artist, const std::string &categorie,
                const std::string &stil, int anPub, bool afisare);
 
-//    void status (){
-//        if (afisare == 1)
-//            std::cout<< "Opera '"<< titlu << "' este afisata\n";
-//        else
-//            std::cout<< "Opera '"<< titlu << "' nu este afisata\n";
-//    }
+    void status ();
+
+    virtual std::shared_ptr<opera_arta> clone() const;
 };
 
 #endif //PROIECT_POO_OPERA_ARTA_H

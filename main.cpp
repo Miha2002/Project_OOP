@@ -6,6 +6,7 @@
 #include "opera_arta.h"
 #include "colectie.h"
 #include "muzeu.h"
+#include "pictura.h"
 
 int main () {
     muzeu M;
@@ -28,6 +29,7 @@ int main () {
     M.adauga(C1);
     M.adauga(C2);
 //    std::cout << M;
+    o1.status();
     M.program();
     M.cost_bilete();
     return 0;
