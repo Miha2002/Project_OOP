@@ -23,3 +23,8 @@ std::shared_ptr<opera_arta> opera_arta::clone() const {
     return std::make_shared<opera_arta>(*this);
 
 }
+
+void opera_arta::afis(std::ostream &os) const {
+    os << "titlu: " << titlu << "artist: " << artist << "stil: " << stil
+       << "an_pub: " << an_pub << "afisare: " << afisare;
+}

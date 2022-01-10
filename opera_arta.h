@@ -9,11 +9,13 @@
 #include <memory>
 
 class opera_arta {
+protected:
     std::string titlu;
     std::string artist;
     std::string stil;
     int an_pub;
     bool afisare;
+    virtual void afis(std::ostream& os) const;
 
 public:
     friend std::ostream &operator<<(std::ostream &os, const opera_arta &arta);

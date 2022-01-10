@@ -18,17 +18,20 @@ colectie::colectie(const std::string &titlu, int cod) : titlu(titlu), cod(cod) {
 colectie::colectie(const std::string &titlu, int cod, const std::vector<std::shared_ptr<opera_arta>> &opere) : titlu(
         titlu), cod(cod), opere(opere) {}
 
-colectie::colectie(const colectie &copie) {
-    this->titlu = copie.titlu;
-    this->cod   = copie.cod;
-    this->opere = copie.opere;
+colectie::colectie(const colectie &copie) : titlu(copie.titlu), cod(copie.cod) {
+    for(const auto &opera_arta: copie.opere)
+        opere.push_back(opera_arta->clone());
 }
 
 colectie &colectie::operator=(const colectie &copie) {
     if(this != &copie) {
         this->titlu = copie.titlu;
         this->cod   = copie.cod;
-        this->opere = copie.opere;
+        auto opere_noi = std::vector <std::shared_ptr<opera_arta>>();
+        for(const auto &opera_arta: copie.opere) {
+            opere_noi.push_back(opera_arta->clone());
+        }
+        this->opere = opere_noi;
     }
     return *this;
 }
