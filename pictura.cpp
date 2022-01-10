@@ -4,9 +4,9 @@
 #include "pictura.h"
 
 pictura::pictura(const std::string &titlu, const std::string &artist, const std::string &stil,
-                 int anPub, bool afisare, const std::string &tipVopsea, int lungime,
+                 int anPub, bool afisare, const std::string &tipVopsea, int inaltime,
                  int latime) : opera_arta(titlu, artist, stil, anPub, afisare), tip_vopsea(tipVopsea),
-                               lungime(lungime), latime(latime) {}
+                               inaltime(inaltime), latime(latime) {}
 
 std::shared_ptr<opera_arta> pictura::clone() const{
     return std::make_shared<pictura>(*this);
@@ -29,20 +29,20 @@ void pictura::descriere() {
     std::cin>>x;
     if (x==1)
         std::cout<<"Tipul de vopsea folosit este "<< tip_vopsea << ",iar dimensiunea picturii este "
-        << lungime <<"x"<<latime<<".\n";
+        << inaltime <<"x"<<latime<<".\n";
 }
 
 void pictura::suvenir(){
-    if (lungime > 100 && latime > 100)
+    if (inaltime > 100 && latime > 100)
         std::cout << "Nu se vand copi alea acestei picturi.\n";
     else {
-        if (lungime > 50 && latime > 50)
-            std::cout << "Copi ale acestei picturi, avand dimensiunile " << lungime * 0.25 << "x" << latime * 0.25
-                      << "pot fi cumparate ca suvenir la pretul de" << int((lungime * 0.25) * (latime * 0.25) / 10)
+        if (inaltime > 50 && latime > 50)
+            std::cout << "Copi ale acestei picturi, avand dimensiunile " << inaltime * 0.25 << "x" << latime * 0.25
+                      << "pot fi cumparate ca suvenir la pretul de" << int((inaltime * 0.25) * (latime * 0.25) / 10)
                       << "RON.\n";
         else
-            std::cout << "Copi ale acestei picturi, avand dimensiunile " << lungime * 0.5 << "x" << latime * 0.5
-                      << "pot fi cumparate ca suvenir la pretul de" << int((lungime * 0.5) * (latime * 0.5) / 5)
+            std::cout << "Copi ale acestei picturi, avand dimensiunile " << inaltime * 0.5 << "x" << latime * 0.5
+                      << "pot fi cumparate ca suvenir la pretul de" << int((inaltime * 0.5) * (latime * 0.5) / 5)
                       << "RON.\n";
     }
 }

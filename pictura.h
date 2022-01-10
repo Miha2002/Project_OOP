@@ -10,7 +10,7 @@
 
 class pictura : public opera_arta {
     std::string tip_vopsea;
-    int lungime; //in cm
+    int inaltime; //in cm
     int latime; //in cm
 
 protected:
@@ -18,7 +18,7 @@ protected:
 
 public:
     pictura(const std::string &titlu, const std::string &artist, const std::string &stil,
-            int anPub, bool afisare, const std::string &tipVopsea, int lungime, int latime);
+            int anPub, bool afisare, const std::string &tipVopsea, int inaltime, int latime);
 
     std::shared_ptr<opera_arta> clone() const override;
 

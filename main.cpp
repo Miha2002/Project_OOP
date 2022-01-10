@@ -4,24 +4,27 @@
 #include "colectie.h"
 #include "muzeu.h"
 #include "pictura.h"
+#include "sculptura.h"
 
 int main () {
-    muzeu M;
+    muzeu M("Muzeul de Arta Universala",20);
     M.setBilet(30);
     colectie C1{"Din trecut",101};
     colectie C2{"Arta contemporana",102};
 
-    pictura o1{"Camp cu maci","Claude Monet","pictura","impresionism", 1870,1};
-    pictura o2{"Floarea soarelui","Vincent Van Gogh","pictura","post-impresionism", 1888,1};
-    sculptura o3{"Pieta","Michelangelo Buonarroti","sculptura","renascentism", 1499,0};
-    opera_arta o4{"Cainele balon","Jeff Koons","sculptura","arta contemporana", 1993,1};
-    opera_arta o5{"Flumequin","Damien Hirst","pictura","arta contemporana", 2007,0};
+    pictura p1{"Camp cu maci","Claude Monet","impresionism", 1870, 1, "ulei",50 ,65};
+    pictura p2{"Floarea soarelui","Vincent Van Gogh","post-impresionism", 1888, 1, "ulei", 92, 73};
+    pictura p3{"Flumequine","Damien Hirst","arta contemporana", 2007, 0, "acrilic", 140, 108};
 
-    C1.adauga(o1);
-    C1.adauga(o2);
-    C1.adauga(o3);
-    C2.adauga(o4);
-    C2.adauga(o5);
+    sculptura s1{"Pieta","Michelangelo Buonarroti","renascentism", 1499,0, "marmura", 3040, 1.95};
+    sculptura s2{"Cainele balon","Jeff Koons","arta contemporana", 1993,1,"otel",1000, 3.10};
+
+
+    C1.adauga(p1);
+    C1.adauga(p2);
+    C1.adauga(s1);
+    C2.adauga(p3);
+    C2.adauga(s2);
 
     M.adauga(C1);
     M.adauga(C2);
