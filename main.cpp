@@ -26,7 +26,6 @@ int main () {
     M.adauga(C1);
     M.adauga(C2);
 //    std::cout << M;
-    o1.status();
     M.program();
     M.cost_bilete();
     return 0;

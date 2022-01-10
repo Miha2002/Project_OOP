@@ -10,8 +10,8 @@
 
 class pictura : public opera_arta {
     std::string tip_vopsea;
-    int lungime;
-    int latime;
+    int lungime; //in cm
+    int latime; //in cm
 
 protected:
     void afis(std::ostream& os) const override;
@@ -23,6 +23,8 @@ public:
     std::shared_ptr<opera_arta> clone() const override;
 
     void descriere() override;
+
+    void suvenir() override;
 };
 
 #endif //PROIECT_POO_PICTURA_H

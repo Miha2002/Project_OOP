@@ -22,11 +22,11 @@ public:
 
     opera_arta(const std::string &titlu, const std::string &artist, const std::string &stil, int anPub, bool afisare);
 
-    void status ();
-
     virtual std::shared_ptr<opera_arta> clone() const = 0;
 
     virtual void descriere() = 0;
+
+    virtual void suvenir() = 0;
 
 };
 
