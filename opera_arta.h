@@ -27,7 +27,6 @@ public:
     virtual void descriere() = 0;
 
     virtual void suvenir() = 0;
-
 };
 
 #endif //PROIECT_POO_OPERA_ARTA_H
