@@ -12,6 +12,6 @@ std::shared_ptr<opera_arta> pictura::clone() const{
 }
 
 void pictura::afis(std::ostream& os) const{
-    os << "scultura";
+    os << "pictura";
     opera_arta::afis(os);
 }
