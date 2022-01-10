@@ -9,6 +9,8 @@ std::ostream &operator<<(std::ostream &os, const muzeu &muzeu) {
     return os;
 }
 
+muzeu::muzeu(const std::string &nume, int bilet) : nume(nume), bilet(bilet) {}
+
 void muzeu::setBilet(int bilet) {
     muzeu::bilet = bilet;
 }
@@ -27,8 +29,8 @@ void muzeu::program() {
         std::cout<< "Muzeul este deschis de la ora 08:00 pana la 22:00!\n";
 }
 
-void muzeu::cost_bilete() {
-    float cost=0;
+void muzeu::cost_bilete() const {
+    float cost;
     int x,y,g;
     std::cout<< "Cati oameni vor sa viziteze muzeul?\n";
     std::cin>> x;

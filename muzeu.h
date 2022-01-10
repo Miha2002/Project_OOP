@@ -10,18 +10,21 @@
 
 class muzeu {
     std::vector<colectie> colectii;
+    std::string nume;
     int bilet;
 
 public:
     friend std::ostream &operator<<(std::ostream &os, const muzeu &muzeu);
 
+    muzeu(const std::string &nume, int bilet);
+
     void setBilet(int bilet);
 
     void adauga(colectie const &colectie);
 
-    void program ();
+    static void program ();
 
-    void cost_bilete ();
+    void cost_bilete () const;
 };
 
 #endif //PROIECT_POO_MUZEU_H
