@@ -11,9 +11,9 @@ int main () {
     colectie C1{"Din trecut",101};
     colectie C2{"Arta contemporana",102};
 
-    opera_arta o1{"Camp cu maci","Claude Monet","pictura","impresionism", 1870,1};
-    opera_arta o2{"Floarea soarelui","Vincent Van Gogh","pictura","post-impresionism", 1888,1};
-    opera_arta o3{"Pieta","Michelangelo Buonarroti","sculptura","renascentism", 1499,0};
+    pictura o1{"Camp cu maci","Claude Monet","pictura","impresionism", 1870,1};
+    pictura o2{"Floarea soarelui","Vincent Van Gogh","pictura","post-impresionism", 1888,1};
+    sculptura o3{"Pieta","Michelangelo Buonarroti","sculptura","renascentism", 1499,0};
     opera_arta o4{"Cainele balon","Jeff Koons","sculptura","arta contemporana", 1993,1};
     opera_arta o5{"Flumequin","Damien Hirst","pictura","arta contemporana", 2007,0};
 
@@ -26,7 +26,7 @@ int main () {
     M.adauga(C1);
     M.adauga(C2);
 //    std::cout << M;
-//    o1.status();
+    o1.status();
     M.program();
     M.cost_bilete();
     return 0;
