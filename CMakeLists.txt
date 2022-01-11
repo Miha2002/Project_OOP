@@ -3,4 +3,4 @@ project(Proiect_POO)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(Proiect_POO main.cpp opera_arta.cpp colectie.cpp muzeu.cpp pictura.cpp sculptura.cpp)
+add_executable(Proiect_POO main.cpp opera_arta.cpp colectie.cpp muzeu.cpp pictura.cpp sculptura.cpp eroare_opera.cpp eroare_opera.h)
