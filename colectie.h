@@ -14,6 +14,7 @@ class colectie {
     int cod;
     std::vector<std::shared_ptr<opera_arta>> opere;
 
+    static int nr_colectii;
 
 public:
     friend std::ostream &operator<<(std::ostream &os, const colectie &colectie);

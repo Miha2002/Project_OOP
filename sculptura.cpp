@@ -1,10 +1,17 @@
 //
 //
 #include "sculptura.h"
+#include "erori.h"
 
 sculptura::sculptura(const std::string &titlu, const std::string &artist, const std::string &stil, int anPub,
                      bool afisare, const std::string &material, int greutate, float inaltime) :opera_arta(titlu, artist,
-                                stil, anPub, afisare), material(material), greutate(greutate), inaltime(inaltime) {}
+                                stil, anPub, afisare), material(material), greutate(greutate), inaltime(inaltime) {
+
+    if(inaltime<10 || inaltime>800)
+        throw eroare_marime();
+    if(greutate>4000)
+        throw eroare_greutate();
+}
 
 std::shared_ptr<opera_arta> sculptura::clone() const {
     return std::make_shared<sculptura>(*this);

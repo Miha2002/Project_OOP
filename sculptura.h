@@ -11,7 +11,7 @@
 class sculptura : public opera_arta {
     std::string material; //ex. metal, piatra, marmura, lut
     int greutate; //greutatea in kg
-    float inaltime; //inaltimea in metrii
+    float inaltime; //inaltimea in metri
 
 protected:
     void afis(std::ostream& os) const override;

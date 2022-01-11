@@ -9,6 +9,8 @@
 #include <memory>
 
 class opera_arta {
+    static int id_max;
+
 protected:
     std::string titlu;
     std::string artist; //poate sa fie 'necunoscut'
@@ -29,6 +31,8 @@ public:
     virtual void descriere() = 0;
 
     virtual void suvenir() = 0;
+
+    static int getIdMax();
 };
 
 #endif //PROIECT_POO_OPERA_ARTA_H

@@ -2,11 +2,16 @@
 //
 
 #include "pictura.h"
+#include "erori.h"
 
 pictura::pictura(const std::string &titlu, const std::string &artist, const std::string &stil,
                  int anPub, bool afisare, const std::string &tipVopsea, int inaltime,
                  int latime) : opera_arta(titlu, artist, stil, anPub, afisare), tip_vopsea(tipVopsea),
-                               inaltime(inaltime), latime(latime) {}
+                               inaltime(inaltime), latime(latime) {
+
+    if(inaltime<10 || inaltime>500 || latime <10 || latime>500)
+        throw eroare_marime();
+}
 
 std::shared_ptr<opera_arta> pictura::clone() const{
     return std::make_shared<pictura>(*this);

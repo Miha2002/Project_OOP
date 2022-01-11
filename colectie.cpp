@@ -13,7 +13,11 @@ void colectie::adauga(const opera_arta &opera_arta_) {
     opere.push_back(opera_arta_.clone());
 }
 
-colectie::colectie(const std::string &titlu, int cod) : titlu(titlu), cod(cod) {}
+int colectie::nr_colectii = 0;
+
+colectie::colectie(const std::string &titlu, int cod) : titlu(titlu), cod(cod) {
+    nr_colectii++;
+}
 
 colectie::colectie(const std::string &titlu, int cod, const std::vector<std::shared_ptr<opera_arta>> &opere) : titlu(
         titlu), cod(cod), opere(opere) {}
@@ -39,3 +43,4 @@ colectie &colectie::operator=(const colectie &copie) {
 colectie::~colectie() {
     std::cout << "destructor colectie\n";
 }
+
