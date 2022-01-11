@@ -7,7 +7,7 @@ sculptura::sculptura(const std::string &titlu, const std::string &artist, const 
                      bool afisare, const std::string &material, int greutate, float inaltime) :opera_arta(titlu, artist,
                                 stil, anPub, afisare), material(material), greutate(greutate), inaltime(inaltime) {
 
-    if(inaltime<10 || inaltime>800)
+    if(inaltime<0.1 || inaltime>8)
         throw eroare_marime();
     if(greutate>4000)
         throw eroare_greutate();
@@ -42,7 +42,7 @@ void sculptura::descriere() {
 }
 
 void sculptura::suvenir(){
-    if (inaltime > 3.00)
+    if (inaltime > 3.00) //se pierd detalii de pe sculptura
         std::cout<<"Nu se vand copii alea sculpturii.\n";
     else {
         if (inaltime > 2.00)

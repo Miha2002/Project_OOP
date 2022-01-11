@@ -25,6 +25,8 @@ public:
     static void program ();
 
     void cost_bilete () const;
+
+    void colectie_random ();
 };
 
 #endif //PROIECT_POO_MUZEU_H

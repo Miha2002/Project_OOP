@@ -29,9 +29,11 @@ void f1(){
     M.adauga(C1);
     M.adauga(C2);
 
-    M.program();
-    M.cost_bilete();
-    p1.descriere();
+//    M.program();
+//    M.cost_bilete();
+//    p1.descriere();
+//    M.colectie_random();
+    std::cout<<C1;
 }
 
 int main () {

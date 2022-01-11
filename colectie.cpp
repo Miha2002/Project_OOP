@@ -3,7 +3,7 @@
 #include "colectie.h"
 
 std::ostream &operator<<(std::ostream &os, const colectie &colectie) {
-    os << "titlu: " << colectie.titlu << ", cod: " << colectie.cod << ", opere: " << "\n";
+    os << "titlu: " << colectie.titlu << "\ncod: " << colectie.cod << "\nopere: " << "\n";
     for(const auto &opera_arta : colectie.opere)
         os << "\t" << opera_arta;
     return os;
@@ -13,11 +13,7 @@ void colectie::adauga(const opera_arta &opera_arta_) {
     opere.push_back(opera_arta_.clone());
 }
 
-int colectie::nr_colectii = 0;
-
-colectie::colectie(const std::string &titlu, int cod) : titlu(titlu), cod(cod) {
-    nr_colectii++;
-}
+colectie::colectie(const std::string &titlu, int cod) : titlu(titlu), cod(cod) {}
 
 colectie::colectie(const std::string &titlu, int cod, const std::vector<std::shared_ptr<opera_arta>> &opere) : titlu(
         titlu), cod(cod), opere(opere) {}

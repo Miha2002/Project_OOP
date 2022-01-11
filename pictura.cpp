@@ -28,8 +28,8 @@ pictura::~pictura() {
 
 void pictura::descriere() {
     int x;
-    std::cout<<"Aceasta este pictura '"<< titlu <<"' de "<< artist <<" publicata in anul"<< an_pub
-    <<"care apartine stilului "<< stil <<".\n";
+    std::cout<<"Aceasta este pictura '"<< titlu <<"' de "<< artist <<" publicata in anul "<< an_pub
+    <<" care apartine stilului "<< stil <<".\n";
     if (afisare == 1)
         std::cout<<"La momentul actual, opera este afisata in muzeu.\n\n";
     else
@@ -38,7 +38,7 @@ void pictura::descriere() {
     std::cin>>x;
     if (x==1)
         std::cout<<"Tipul de vopsea folosit este "<< tip_vopsea << ",iar dimensiunea picturii este "
-        << inaltime <<"x"<<latime<<".\n";
+        << inaltime<<"x"<<latime<<".\n";
 }
 
 void pictura::suvenir(){
@@ -46,12 +46,12 @@ void pictura::suvenir(){
         std::cout << "Nu se vand copi alea acestei picturi.\n";
     else {
         if (inaltime > 50 && latime > 50)
-            std::cout << "Copi ale acestei picturi, avand dimensiunile " << inaltime * 0.25 << "x" << latime * 0.25
-                      << "pot fi cumparate ca suvenir la pretul de" << int((inaltime * 0.25) * (latime * 0.25) / 10)
+            std::cout << "Copi ale acestei picturi, avand dimensiunile " << inaltime * 0.5 << "x" << latime * 0.5
+                      << "pot fi cumparate ca suvenir la pretul de" << int((inaltime * 0.5) * (latime * 0.5) / 10)
                       << "RON.\n";
         else
-            std::cout << "Copi ale acestei picturi, avand dimensiunile " << inaltime * 0.5 << "x" << latime * 0.5
-                      << "pot fi cumparate ca suvenir la pretul de" << int((inaltime * 0.5) * (latime * 0.5) / 5)
+            std::cout << "Copi ale acestei picturi, avand dimensiunile " << inaltime << "x" << latime
+                      << "pot fi cumparate ca suvenir la pretul de" << (inaltime * latime) / 5
                       << "RON.\n";
     }
 }

@@ -48,3 +48,7 @@ void muzeu::cost_bilete() const {
         cost = cost + 100;
     std::cout<< "Pretul total al biletelor este: " << cost <<"RON\n\n";
 }
+
+void muzeu::colectie_random() {
+    std::cout<<colectii[rand() % colectii.size()]<<"\n";
+}
