@@ -14,11 +14,10 @@ int main () {
 
     pictura p1{"Camp cu maci","Claude Monet","impresionism", 1870, 1, "ulei",50 ,65};
     pictura p2{"Floarea soarelui","Vincent Van Gogh","post-impresionism", 1888, 1, "ulei", 92, 73};
-    pictura p3{"Flumequine","Damien Hirst","arta contemporana", 2007, 0, "acrilic", 140, 108};
+    pictura p3{"Flumequine","Damien Hirst","contemporan", 2007, 0, "acrilic", 140, 108};
 
     sculptura s1{"Pieta","Michelangelo Buonarroti","renascentism", 1499,0, "marmura", 3040, 1.95};
-    sculptura s2{"Cainele balon","Jeff Koons","arta contemporana", 1993,1,"otel",1000, 3.10};
-
+    sculptura s2{"Cainele balon","Jeff Koons","contemporan", 1993,1,"otel",1000, 3.10};
 
     C1.adauga(p1);
     C1.adauga(p2);
