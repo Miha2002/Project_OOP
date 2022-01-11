@@ -15,6 +15,10 @@ void sculptura::afis(std::ostream& os) const{
     opera_arta::afis(os);
 }
 
+sculptura::~sculptura() {
+    std::cout << "destructor sculptura " << titlu << "\n";
+}
+
 void sculptura::descriere() {
     int x;
     std::cout<<"Aceasta este sculptura '"<< titlu <<"' de "<< artist <<" publicata in anul"<< an_pub

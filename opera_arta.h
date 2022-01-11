@@ -24,6 +24,8 @@ public:
 
     virtual std::shared_ptr<opera_arta> clone() const = 0;
 
+    virtual ~opera_arta() = 0;
+
     virtual void descriere() = 0;
 
     virtual void suvenir() = 0;

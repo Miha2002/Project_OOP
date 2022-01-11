@@ -17,6 +17,10 @@ void pictura::afis(std::ostream& os) const{
     opera_arta::afis(os);
 }
 
+pictura::~pictura() {
+    std::cout << "destructor pictura " << titlu << "\n";
+}
+
 void pictura::descriere() {
     int x;
     std::cout<<"Aceasta este pictura '"<< titlu <<"' de "<< artist <<" publicata in anul"<< an_pub
