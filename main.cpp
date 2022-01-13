@@ -7,7 +7,7 @@
 #include "sculptura.h"
 #include "erori.h"
 
-void f1(){
+void functie1(){
     muzeu M("Muzeul de Arta Universala", 20);
     M.setBilet(30);
     colectie C1{"Din trecut", 101};
@@ -38,7 +38,7 @@ void f1(){
 
 int main () {
     try {
-        f1();
+        functie1();
     }
     catch (eroare_opera &error) {
         std::cout << error.what() << "\n";

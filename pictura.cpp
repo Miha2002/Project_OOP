@@ -13,17 +13,14 @@ pictura::pictura(const std::string &titlu, const std::string &artist, const std:
         throw eroare_marime();
 }
 
+std::ostream &operator<<(std::ostream &os, const pictura &pictura) {
+    os << static_cast<const opera_arta &>(pictura) << " tip_vopsea: " << pictura.tip_vopsea << " inaltime: "
+       << pictura.inaltime << " latime: " << pictura.latime;
+    return os;
+}
+
 std::shared_ptr<opera_arta> pictura::clone() const{
     return std::make_shared<pictura>(*this);
-}
-
-void pictura::afis(std::ostream& os) const{
-    os << "Acesta pictura are:\n";
-    opera_arta::afis(os);
-}
-
-pictura::~pictura() {
-    std::cout << "destructor pictura " << titlu << "\n";
 }
 
 void pictura::descriere() {

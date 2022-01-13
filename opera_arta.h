@@ -17,7 +17,6 @@ protected:
     std::string stil;
     int an_pub;
     bool afisare;
-    virtual void afis(std::ostream& os) const;
 
 public:
     friend std::ostream &operator<<(std::ostream &os, const opera_arta &arta);
@@ -26,7 +25,7 @@ public:
 
     virtual std::shared_ptr<opera_arta> clone() const = 0;
 
-    virtual ~opera_arta() = 0;
+    virtual ~opera_arta() = default;
 
     virtual void descriere() = 0;
 

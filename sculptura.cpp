@@ -13,17 +13,14 @@ sculptura::sculptura(const std::string &titlu, const std::string &artist, const 
         throw eroare_greutate();
 }
 
+std::ostream &operator<<(std::ostream &os, const sculptura &sculptura) {
+    os << static_cast<const opera_arta &>(sculptura) << " material: " << sculptura.material << " greutate: "
+       << sculptura.greutate << " inaltime: " << sculptura.inaltime;
+    return os;
+}
+
 std::shared_ptr<opera_arta> sculptura::clone() const {
     return std::make_shared<sculptura>(*this);
-}
-
-void sculptura::afis(std::ostream& os) const{
-    os << "scultura";
-    opera_arta::afis(os);
-}
-
-sculptura::~sculptura() {
-    std::cout << "destructor sculptura " << titlu << "\n";
 }
 
 void sculptura::descriere() {

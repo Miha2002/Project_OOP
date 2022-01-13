@@ -13,16 +13,13 @@ class sculptura : public opera_arta {
     int greutate; //greutatea in kg
     float inaltime; //inaltimea in metri
 
-protected:
-    void afis(std::ostream& os) const override;
-
 public:
     sculptura(const std::string &titlu, const std::string &artist, const std::string &stil, int anPub, bool afisare,
               const std::string &material, int greutate, float inaltime);
 
-    std::shared_ptr<opera_arta> clone() const override;
+    friend std::ostream &operator<<(std::ostream &os, const sculptura &sculptura);
 
-    ~sculptura() override;
+    std::shared_ptr<opera_arta> clone() const override;
 
     void descriere() override;
 
