@@ -5,7 +5,7 @@
 std::ostream &operator<<(std::ostream &os, const colectie &colectie) {
     os << "titlu: " << colectie.titlu << "\ncod: " << colectie.cod << "\nopere: " << "\n";
     for(const auto &opera_arta : colectie.opere)
-        os << "\t" << opera_arta;
+        os << "\t" << *opera_arta << "\n";
     return os;
 }
 
