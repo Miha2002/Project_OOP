@@ -49,7 +49,9 @@ int main () {
     catch (eroare_opera &error) {
         std::cout << error.what() << "\n";
     }
-    catch (std::exception& e){}
+    catch (std::exception& e){
+        std::cout << e.what() << "\n";
+    }
 
     return 0;
 }
