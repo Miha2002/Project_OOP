@@ -32,6 +32,8 @@ public:
     void proces_licitatie (int cost_initial);
 
     void licitatii ();
+
+    void buget_plus ();
 };
 
 #endif //PROIECT_POO_MUZEU_H

@@ -103,7 +103,7 @@ void muzeu::licitatii() {
     << "Bugetul initial este: " << buget << " RON\n\n";
 
     static int count=0;
-    while (buget > 2000 && count < 10) {
+    while (buget > 2000 && count < 12) {
         proces_licitatie((rand() % 70 + 30) * 50);
         count++;
     }
@@ -112,3 +112,9 @@ void muzeu::licitatii() {
     std::cout << "Bugetul final este: " << buget << " RON\n"
     <<"SFARSITUL LICITATIILOR\n\n";
 }
+
+void muzeu::buget_plus() {
+    buget = buget + (rand() % 50 + 50) * 100;
+    std::cout << "S-au adaugat bani la buget.\nBugetul este: " << buget << " RON\n";
+}
+

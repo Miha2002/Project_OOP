@@ -39,6 +39,8 @@ void functie1(){
 //    p1.descriere();
 //    M.colectie_random();
     M.licitatii();
+    M.buget_plus();
+    M.licitatii();
 //    std::cout<<M;
 }
 
