@@ -5,8 +5,8 @@
 
 
 std::ostream &operator<<(std::ostream &os, const opera_arta &arta) {
-    os << "titlu: " << arta.titlu << " artist: " << arta.artist << " stil: "
-       << arta.stil << " an_pub: " << arta.an_pub << " afisare: " << arta.afisare;
+    os << "titlu: " << arta.titlu << ", artist: " << arta.artist << ", stil: "
+       << arta.stil << ", an_pub: " << arta.an_pub << ", afisare: " << arta.afisare;
     return os;
 }
 

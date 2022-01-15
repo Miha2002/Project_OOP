@@ -10,8 +10,9 @@
 void functie1(){
     muzeu M("Muzeul de Arta Universala", 20);
     M.setBilet(30);
-    colectie C1{"Din trecut", 101};
+    colectie C1{"Trecutul alb-negru", 101};
     colectie C2{"Arta contemporana", 102};
+    colectie C3{"Adevarul despre arta", 103};
 
     pictura p1{"Camp cu maci", "Claude Monet", "impresionism", 1870, 1, "ulei", 50, 65};
     pictura p2{"Floarea soarelui", "Vincent Van Gogh", "post-impresionism", 1888, 1, "ulei", 92, 73};
@@ -28,12 +29,12 @@ void functie1(){
 
     M.adauga(C1);
     M.adauga(C2);
+    M.adauga(C3);
 
 //    M.program();
 //    M.cost_bilete();
 //    p1.descriere();
-//    M.colectie_random();
-    std::cout<<C1;
+    M.colectie_random();
 }
 
 int main () {

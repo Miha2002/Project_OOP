@@ -50,5 +50,7 @@ void muzeu::cost_bilete() const {
 }
 
 void muzeu::colectie_random() {
-    std::cout<<colectii[rand() % colectii.size()]<<"\n";
+    srand ( time(NULL) );
+    int x = rand() % colectii.size();
+    std::cout<< x << "\n" << colectii[x]<<"\n";
 }
