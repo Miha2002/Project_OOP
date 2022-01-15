@@ -16,16 +16,17 @@ void functie1(){
     colectie C2{"Arta contemporana", 102};
     colectie C3{"Adevarul despre arta", 103};
 
-    pictura p1{"Camp cu maci", "Claude Monet", "impresionism", 1870, 1, "ulei", 50, 65};
-    pictura p2{"Floarea soarelui", "Vincent Van Gogh", "post-impresionism", 1888, 1, "ulei", 92, 73};
-    pictura p3{"Flumequine", "Damien Hirst", "contemporan", 2007, 0, "acrilic", 140, 108};
+    pictura p1{"Camp cu maci", "Claude Monet", "impresionism", 1870, true, "ulei", 50, 65};
+    pictura p2{"Floarea soarelui", "Vincent Van Gogh", "post-impresionism", 1888, true, "ulei", 92, 73};
+    pictura p3{"Flumequine", "Damien Hirst", "contemporan", 2007, false, "acrilic", 140, 108};
 
-    sculptura s1{"Pieta", "Michelangelo Buonarroti", "renascentism", 1499, 0, "marmura", 3040, 1.95};
-    sculptura s2{"Cainele balon", "Jeff Koons", "contemporan", 1993, 1, "otel", 1000, 3.10};
+    sculptura s1{"Pieta", "Michelangelo Buonarroti", "renascentism", 1499, false, "marmura", 3040, 1.95};
+    sculptura s2{"Cainele balon", "Jeff Koons", "contemporan", 1993, true, "otel", 1000, 3.10};
 
     C1.adauga(p1);
     C1.adauga(p2);
     C1.adauga(s1);
+
     C2.adauga(p3);
     C2.adauga(s2);
 
@@ -48,6 +49,7 @@ int main () {
     catch (eroare_opera &error) {
         std::cout << error.what() << "\n";
     }
+    catch (std::exception& e){}
 
     return 0;
 }
