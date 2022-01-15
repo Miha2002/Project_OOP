@@ -3,13 +3,17 @@
 #include "muzeu.h"
 
 std::ostream &operator<<(std::ostream &os, const muzeu &muzeu) {
-    os << "colectii: " << " bilet: " << muzeu.bilet;
+    os << "\nnume: " << muzeu.nume << "\nbilet: " << muzeu.bilet
+    << "\nbuget:" << muzeu.buget << " RON" << "\ncolectii:";
     for(const auto &colectie : muzeu.colectii)
-        os << colectie;
+        os << "\n" << colectie;
     return os;
 }
 
-muzeu::muzeu(const std::string &nume, int bilet) : nume(nume), bilet(bilet) {}
+muzeu::muzeu(const std::string &nume, int bilet) : nume(nume), bilet(bilet) {
+
+    this->buget = (rand() % 50 + 50) * 100;
+}
 
 void muzeu::setBilet(int bilet) {
     muzeu::bilet = bilet;
@@ -45,12 +49,66 @@ void muzeu::cost_bilete() const {
         cost= cost * 0.90;
     }
     if (g==1)
-        cost = cost + 100;
+        cost = cost + 1000;
     std::cout<< "Pretul total al biletelor este: " << cost <<"RON\n\n";
 }
 
 void muzeu::colectie_random() {
-    srand ( time(NULL) );
     int x = rand() % colectii.size();
     std::cout<< x << "\n" << colectii[x]<<"\n";
+}
+
+void muzeu::proces_licitatie(int cost_initial) {
+    int cost_lici;                  //pretul dupa ce creste la licitatie
+    bool ultima_oferta = false;     //=true reprezinta ca ultimul pret a fost oferit de muzeu
+    bool sfarsit = false;           //=true, se termina licitatia
+    int count=0;                    //numara ofertele
+
+    std::cout<< "Opera costa " << cost_initial << " RON.\n";
+    cost_lici = cost_initial;
+
+    if (cost_initial < buget * 0.80) {
+        while (cost_lici < buget || !sfarsit) {
+            if (rand() % 3  == 0 && ultima_oferta) {
+                cost_lici = cost_lici + (rand() % 70 + 30) * 10;
+                    std::cout << "Altcineva ofera " << cost_lici << " RON.\n";
+                    ultima_oferta = false;
+                    count++;
+            }
+            else if (rand() % 3  == 1 && !ultima_oferta) {
+                cost_lici = cost_lici + (rand() % 70 + 30) * 10;
+                std::cout << "Muzeul ofera " << cost_lici << " RON.\n";
+                ultima_oferta = true;
+                count++;
+            }
+                else {
+                    if (ultima_oferta && count) {
+                        std::cout << "Muzeu castiga licitatia!\n\n";
+                        buget = buget - cost_lici;
+                        sfarsit = true;
+                        break;}
+                    if (!ultima_oferta && count) {
+                        std::cout << "Muzeu pierde licitatia!\n\n";
+                        sfarsit = true;
+                        break;}
+                }
+            }
+    }
+    else
+        std::cout<< "Muzeul nu are destui bani!" << "\n\n";
+}
+
+void muzeu::licitatii() {
+    std::cout << "\n\nINCEPUTUL LICITATIILOR\n"
+    << "bugetul initial este: " << buget << " RON\n\n";
+
+    int count=0;
+    while (buget > 2000 && count < 10) {
+        proces_licitatie((rand() % 70 + 30) * 50);
+        count++;
+    }
+    std::cout << "Muzeul nu vrea/poate sa cumpere alte opere de arta.\n\n";
+
+    std::cout << "bugetul final este: " << buget << " RON\n"
+    <<"SFARSITUL LICITATIILOR\n\n";
 }

@@ -8,6 +8,8 @@
 #include "erori.h"
 
 void functie1(){
+    srand(time(NULL));
+
     muzeu M("Muzeul de Arta Universala", 20);
     M.setBilet(30);
     colectie C1{"Trecutul alb-negru", 101};
@@ -34,7 +36,9 @@ void functie1(){
 //    M.program();
 //    M.cost_bilete();
 //    p1.descriere();
-    M.colectie_random();
+//    M.colectie_random();
+    M.licitatii();
+//    std::cout<<M;
 }
 
 int main () {
