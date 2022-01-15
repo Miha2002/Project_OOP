@@ -100,15 +100,15 @@ void muzeu::proces_licitatie(int cost_initial) {
 
 void muzeu::licitatii() {
     std::cout << "\n\nINCEPUTUL LICITATIILOR\n"
-    << "bugetul initial este: " << buget << " RON\n\n";
+    << "Bugetul initial este: " << buget << " RON\n\n";
 
-    int count=0;
+    static int count=0;
     while (buget > 2000 && count < 10) {
         proces_licitatie((rand() % 70 + 30) * 50);
         count++;
     }
     std::cout << "Muzeul nu vrea/poate sa cumpere alte opere de arta.\n\n";
 
-    std::cout << "bugetul final este: " << buget << " RON\n"
+    std::cout << "Bugetul final este: " << buget << " RON\n"
     <<"SFARSITUL LICITATIILOR\n\n";
 }
