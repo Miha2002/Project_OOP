@@ -14,9 +14,13 @@ sculptura::sculptura(const std::string &titlu, const std::string &artist, const 
 }
 
 std::ostream &operator<<(std::ostream &os, const sculptura &sculptura) {
-    os << static_cast<const opera_arta &>(sculptura) << " material: " << sculptura.material << " greutate: "
-       << sculptura.greutate << " inaltime: " << sculptura.inaltime;
+    os << static_cast<const opera_arta &>(sculptura) << "\nmaterial: " << sculptura.material << ", greutate: "
+       << sculptura.greutate << ", inaltime: " << sculptura.inaltime;
     return os;
+}
+
+const std::string &sculptura::getTitlu() const {
+    return opera_arta::getTitlu();
 }
 
 std::shared_ptr<opera_arta> sculptura::clone() const {
@@ -40,13 +44,13 @@ void sculptura::descriere() {
 
 void sculptura::suvenir(){
     if (inaltime > 3.00) //se pierd detalii de pe sculptura
-        std::cout<<"Nu se vand copii alea sculpturii.\n";
+        std::cout<<"Nu se vand copi ale sculpturii.\n";
     else {
         if (inaltime > 2.00)
-            std::cout << "Copii in miniatura ale sculpturii, " << inaltime * 5
+            std::cout << "Copi in miniatura ale sculpturii, " << inaltime * 5
                       << "cm, pot fi achizitonate la pretul de " <<int(inaltime * 20) << "RON.\n";
         else
-            std::cout << "Copii in miniatura ale sculpturii, " << inaltime * 10
+            std::cout << "Copi in miniatura ale sculpturii, " << inaltime * 10
                       << "cm, pot fi achizitonate la pretul de " <<int(inaltime * 40) << "RON.\n";
     }
 }

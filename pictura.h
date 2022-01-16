@@ -19,6 +19,8 @@ public:
 
     std::shared_ptr<opera_arta> clone() const override;
 
+    const std::string &getTitlu() const;
+
     void descriere() override;
 
     void suvenir() override;

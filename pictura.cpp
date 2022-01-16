@@ -14,9 +14,13 @@ pictura::pictura(const std::string &titlu, const std::string &artist, const std:
 }
 
 std::ostream &operator<<(std::ostream &os, const pictura &pictura) {
-    os << static_cast<const opera_arta &>(pictura) << " tip_vopsea: " << pictura.tip_vopsea << " inaltime: "
-       << pictura.inaltime << " latime: " << pictura.latime;
+    os << static_cast<const opera_arta &>(pictura) << "\ntip_vopsea: " << pictura.tip_vopsea << ", inaltime: "
+       << pictura.inaltime << ", latime: " << pictura.latime;
     return os;
+}
+
+const std::string &pictura::getTitlu() const {
+    return opera_arta::getTitlu();
 }
 
 std::shared_ptr<opera_arta> pictura::clone() const{
@@ -44,11 +48,11 @@ void pictura::suvenir(){
     else {
         if (inaltime > 50 && latime > 50)
             std::cout << "Copi ale acestei picturi, avand dimensiunile " << inaltime * 0.5 << "x" << latime * 0.5
-                      << "pot fi cumparate ca suvenir la pretul de" << int((inaltime * 0.5) * (latime * 0.5) / 10)
+                      << " pot fi cumparate ca suvenir la pretul de " << int((inaltime * 0.5) * (latime * 0.5) / 10)
                       << "RON.\n";
         else
             std::cout << "Copi ale acestei picturi, avand dimensiunile " << inaltime << "x" << latime
-                      << "pot fi cumparate ca suvenir la pretul de" << (inaltime * latime) / 5
+                      << " pot fi cumparate ca suvenir la pretul de " << (inaltime * latime) / 5
                       << "RON.\n";
     }
 }

@@ -4,9 +4,10 @@
 #ifndef PROIECT_POO_COLECTIE_H
 #define PROIECT_POO_COLECTIE_H
 
-#include <vector>
 #include <iostream>
+#include <vector>
 #include <memory>
+#include <algorithm>
 #include "opera_arta.h"
 
 class colectie {
@@ -27,7 +28,11 @@ public:
 
     colectie &operator=(const colectie &copie);
 
-    ~colectie();
+    ~colectie() = default;
+
+    int cautare (std::shared_ptr<opera_arta> o);
+
+    void suvenir_col(std::shared_ptr<opera_arta> o);
 };
 
 #endif //PROIECT_POO_COLECTIE_H

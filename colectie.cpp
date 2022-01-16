@@ -36,7 +36,19 @@ colectie &colectie::operator=(const colectie &copie) {
     return *this;
 }
 
-colectie::~colectie() {
-    std::cout << "destructor colectie\n";
+int colectie::cautare(std::shared_ptr<opera_arta> o) {
+    for(const auto& i: opere)
+        if (i->getTitlu() == o->getTitlu()) {
+            std::cout << "Opera " << o->getTitlu() << " se afla in colectia aceasta!\n";
+            return 1;
+        }
+        else {
+            std::cout << "Opera " << o->getTitlu() << " nu se afla in colectia aceasta!\n";
+            return 0;
+        }
 }
 
+void colectie::suvenir_col(std::shared_ptr<opera_arta> o) {
+    if (cautare(o))
+        o->suvenir();
+}

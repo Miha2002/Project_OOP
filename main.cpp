@@ -38,10 +38,11 @@ void functie1(){
 //    M.cost_bilete();
 //    p1.descriere();
 //    M.colectie_random();
-    M.licitatii();
-    M.buget_plus();
-    M.licitatii();
+//    M.licitatii();
+//    M.buget_plus();
+//    M.licitatii();
 //    std::cout<<M;
+    C1.suvenir_col(std::make_shared<pictura>(p1));
 }
 
 int main () {

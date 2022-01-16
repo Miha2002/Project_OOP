@@ -10,6 +10,7 @@
 
 class opera_arta {
     static int id_max;
+    const int id;
 
 protected:
     std::string titlu;
@@ -22,6 +23,12 @@ public:
     friend std::ostream &operator<<(std::ostream &os, const opera_arta &arta);
 
     opera_arta(const std::string &titlu, const std::string &artist, const std::string &stil, int anPub, bool afisare);
+
+    opera_arta(const opera_arta& copie);
+
+    const std::string &getTitlu() const;
+
+    opera_arta& operator =(const opera_arta& copie);
 
     virtual std::shared_ptr<opera_arta> clone() const = 0;
 

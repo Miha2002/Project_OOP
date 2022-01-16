@@ -19,6 +19,8 @@ public:
 
     friend std::ostream &operator<<(std::ostream &os, const sculptura &sculptura);
 
+    const std::string &getTitlu() const;
+
     std::shared_ptr<opera_arta> clone() const override;
 
     void descriere() override;
