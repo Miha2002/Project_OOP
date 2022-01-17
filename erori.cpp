@@ -4,7 +4,7 @@
 #include "erori.h"
 
 eroare_opera::eroare_opera(const std::string &arg) :
-runtime_error("Eroare opera:" + arg) {}
+runtime_error("Eroare opera: " + arg) {}
 
 eroare_stil::eroare_stil() : eroare_opera("Stilul acesta nu este permis"){}
 
