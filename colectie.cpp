@@ -37,18 +37,6 @@ colectie &colectie::operator=(const colectie &copie) {
     return *this;
 }
 
-//int colectie::cautare(const std::string& s) {
-//
-//    int i, x = opere.size();
-//    for (i = 0; i < x ; i++)
-//        if (opere[i]->getTitlu() == s) {
-//            std::cout << "Opera " << s << " se afla in colectia aceasta!\n";
-//            return i;
-//        } else
-//            //std::cout << "Opera " << s << " nu se afla in colectia aceasta!\n";
-//            throw eroare_cautare();
-//}
-
 int colectie::cautare(const std::string &s) {
     int i;
     for (i=0 ; i<opere.size() ; i++) {
