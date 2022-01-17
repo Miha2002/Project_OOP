@@ -2,6 +2,7 @@
 //
 #include "colectie.h"
 
+
 std::ostream &operator<<(std::ostream &os, const colectie &colectie) {
     os << "titlu: " << colectie.titlu << "\ncod: " << colectie.cod << "\nopere: " << "\n";
     for(const auto &opera_arta : colectie.opere)
@@ -36,19 +37,31 @@ colectie &colectie::operator=(const colectie &copie) {
     return *this;
 }
 
-int colectie::cautare(std::shared_ptr<opera_arta> o) {
-    for(const auto& i: opere)
-        if (i->getTitlu() == o->getTitlu()) {
-            std::cout << "Opera " << o->getTitlu() << " se afla in colectia aceasta!\n";
-            return 1;
-        }
-        else {
-            std::cout << "Opera " << o->getTitlu() << " nu se afla in colectia aceasta!\n";
-            return 0;
-        }
+//int colectie::cautare(const std::string& s) {
+//
+//    int i, x = opere.size();
+//    for (i = 0; i < x ; i++)
+//        if (opere[i]->getTitlu() == s) {
+//            std::cout << "Opera " << s << " se afla in colectia aceasta!\n";
+//            return i;
+//        } else
+//            //std::cout << "Opera " << s << " nu se afla in colectia aceasta!\n";
+//            throw eroare_cautare();
+//}
+
+int colectie::cautare(const std::string &s) {
+    int i;
+    for (i=0 ; i<opere.size() ; i++) {
+        if (opere[i]->getTitlu() == s)
+            return i;
+    }
+    throw eroare_cautare();
 }
 
-void colectie::suvenir_col(std::shared_ptr<opera_arta> o) {
-    if (cautare(o))
-        o->suvenir();
+void colectie::suvenir_col(const std::string& s) {
+    if (cautare(s)) {
+        int x = cautare(s);
+        opere[x]->suvenir();
+    }
+
 }

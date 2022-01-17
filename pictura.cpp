@@ -44,14 +44,14 @@ void pictura::descriere() {
 
 void pictura::suvenir(){
     if (inaltime > 100 && latime > 100)
-        std::cout << "Nu se vand copi alea acestei picturi.\n";
+        std::cout << "Nu se vand copii alea acestei picturi.\n";
     else {
         if (inaltime > 50 && latime > 50)
-            std::cout << "Copi ale acestei picturi, avand dimensiunile " << inaltime * 0.5 << "x" << latime * 0.5
+            std::cout << "Copii ale acestei picturi, avand dimensiunile " << inaltime * 0.5 << "x" << latime * 0.5
                       << " pot fi cumparate ca suvenir la pretul de " << int((inaltime * 0.5) * (latime * 0.5) / 10)
                       << "RON.\n";
         else
-            std::cout << "Copi ale acestei picturi, avand dimensiunile " << inaltime << "x" << latime
+            std::cout << "Copii ale acestei picturi, avand dimensiunile " << inaltime << "x" << latime
                       << " pot fi cumparate ca suvenir la pretul de " << (inaltime * latime) / 5
                       << "RON.\n";
     }

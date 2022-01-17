@@ -31,5 +31,10 @@ public:
     eroare_greutate();
 };
 
+class eroare_cautare : public eroare_opera {
+public:
+    eroare_cautare();
+};
+
 
 #endif //PROIECT_POO_ERORI_H

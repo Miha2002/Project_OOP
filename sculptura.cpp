@@ -44,13 +44,13 @@ void sculptura::descriere() {
 
 void sculptura::suvenir(){
     if (inaltime > 3.00) //se pierd detalii de pe sculptura
-        std::cout<<"Nu se vand copi ale sculpturii.\n";
+        std::cout<<"Nu se vand copii ale sculpturii.\n";
     else {
         if (inaltime > 2.00)
-            std::cout << "Copi in miniatura ale sculpturii, " << inaltime * 5
+            std::cout << "Copii in miniatura ale sculpturii, " << inaltime * 5
                       << "cm, pot fi achizitonate la pretul de " <<int(inaltime * 20) << "RON.\n";
         else
-            std::cout << "Copi in miniatura ale sculpturii, " << inaltime * 10
+            std::cout << "Copii in miniatura ale sculpturii, " << inaltime * 10
                       << "cm, pot fi achizitonate la pretul de " <<int(inaltime * 40) << "RON.\n";
     }
 }

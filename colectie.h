@@ -9,6 +9,7 @@
 #include <memory>
 #include <algorithm>
 #include "opera_arta.h"
+#include "erori.h"
 
 class colectie {
     std::string titlu;
@@ -30,9 +31,9 @@ public:
 
     ~colectie() = default;
 
-    int cautare (std::shared_ptr<opera_arta> o);
+    int cautare(const std::string& s);
 
-    void suvenir_col(std::shared_ptr<opera_arta> o);
+    void suvenir_col(const std::string& s);
 };
 
 #endif //PROIECT_POO_COLECTIE_H

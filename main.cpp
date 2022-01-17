@@ -41,8 +41,8 @@ void functie1(){
 //    M.licitatii();
 //    M.buget_plus();
 //    M.licitatii();
-//    std::cout<<M;
-    C1.suvenir_col(std::make_shared<pictura>(p1));
+    C1.suvenir_col("Pieta");
+    C1.suvenir_col("Bieta");
 }
 
 int main () {

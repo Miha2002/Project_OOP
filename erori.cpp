@@ -13,3 +13,5 @@ eroare_an::eroare_an() : eroare_opera("Opera este prea veche"){}
 eroare_marime::eroare_marime() : eroare_opera("Opera este prea mare"){}
 
 eroare_greutate::eroare_greutate() : eroare_opera("Sculptura este prea grea"){}
+
+eroare_cautare::eroare_cautare() : eroare_opera("Opera cu acest titlul nu a fost gasita"){}
