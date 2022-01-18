@@ -27,10 +27,14 @@ void muzeu<A,B>::adauga(const colectie &colectie) {
     colectii.push_back(colectie);
 }
 
+enum zile {
+    Luni, Marti, Miercuri, Joi, Vineri, Sambata, Duminica
+    };
+
 template <typename A, typename B>
 void muzeu<A,B>::program() {
     int x;
-    std::cout<< "In ce zi doriti sa vizitati?\n1-LUNI\n2-MARTI\n3-MIERCURI\n4-JOI\n5-VINERI\n6-SAMBATA\n7-DUMINICA\n";
+    std::cout<< "In ce zi doriti sa vizitati?\nPrecizati ziua (1-7)";
     std::cin>>x;
     if(x==1)
         std::cout<< "Muzeul este inchis in aceasta zi!\n";

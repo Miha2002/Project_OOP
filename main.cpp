@@ -6,6 +6,7 @@
 #include "pictura.h"
 #include "sculptura.h"
 #include "erori.h"
+#include "builder.h"
 
 void functie1(){
     srand(time(NULL));
@@ -34,15 +35,23 @@ void functie1(){
     M.adauga(C2);
     M.adauga(C3);
 
-//    M.program();
-//    M.cost_bilete();
+    desen_builder x;
+    desen d = x.lungime(25).latime(10).culoare_pr("rosu").
+              tip_desen("peisaj").obiect("lac").build();
+    std::cout << d;
+
+//    M.program();              //Afisaza programul muzeului intr-o anumita zi
+//    M.cost_bilete();          //Calculeaza pretul biletelor
+//    M.colectie_random();      //Afisaza detaliile unei colectii random
+
+//    M.licitatii();            //Simuleaza o licitatie - limitata la 12 opere achizitionate
+//    M.buget_plus();           //Adauga o suma random la bugetul muzeului
+//    M.licitatii();            //Licitatie 2
+
 //    p1.descriere();
-//    M.colectie_random();
-//    M.licitatii();
-//    M.buget_plus();
-//    M.licitatii();
-    C1.suvenir_col("Pieta");
-    C1.suvenir_col("Bieta");
+
+//    C1.suvenir_col("Pieta");  //Cauta o opera si afisaza daca exista suveniruri pt ea
+//    C1.suvenir_col("Bieta");
 }
 
 int main () {
