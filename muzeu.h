@@ -8,18 +8,19 @@
 #include <vector>
 #include "colectie.h"
 
+template <typename A, typename B>
 class muzeu {
     std::vector<colectie> colectii;
     std::string nume;
-    int bilet;
-    int buget; //bugetul rezervat achizitiei de opere de arta
+    A bilet;
+    B buget; //bugetul rezervat achizitiei de opere de arta
 
 public:
-    friend std::ostream &operator<<(std::ostream &os, const muzeu &muzeu);
+    friend std::ostream &operator<<(std::ostream &os, const muzeu<int,int> &muzeu);
 
-    muzeu(const std::string &nume, int bilet);
+    muzeu(const std::string &nume, A bilet);
 
-    void setBilet(int bilet);
+    void setBilet(A bilet);
 
     void adauga(colectie const &colectie);
 

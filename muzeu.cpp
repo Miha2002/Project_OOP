@@ -2,7 +2,8 @@
 //
 #include "muzeu.h"
 
-std::ostream &operator<<(std::ostream &os, const muzeu &muzeu) {
+template <typename A, typename B>
+std::ostream &operator<<(std::ostream &os, const muzeu<A,B> &muzeu) {
     os << "\nnume: " << muzeu.nume << "\nbilet: " << muzeu.bilet
     << "\nbuget:" << muzeu.buget << " RON" << "\ncolectii:";
     for(const auto &colectie : muzeu.colectii)
@@ -10,20 +11,24 @@ std::ostream &operator<<(std::ostream &os, const muzeu &muzeu) {
     return os;
 }
 
-muzeu::muzeu(const std::string &nume, int bilet) : nume(nume), bilet(bilet) {
+template <typename A, typename B>
+muzeu<A,B>::muzeu(const std::string &nume, A bilet) : nume(nume), bilet(bilet) {
 
     this->buget = (rand() % 50 + 50) * 100;
 }
 
-void muzeu::setBilet(int bilet) {
+template <typename A, typename B>
+void muzeu<A,B>::setBilet(A bilet) {
     muzeu::bilet = bilet;
 }
 
-void muzeu::adauga(const colectie &colectie) {
+template <typename A, typename B>
+void muzeu<A,B>::adauga(const colectie &colectie) {
     colectii.push_back(colectie);
 }
 
-void muzeu::program() {
+template <typename A, typename B>
+void muzeu<A,B>::program() {
     int x;
     std::cout<< "In ce zi doriti sa vizitati?\n1-LUNI\n2-MARTI\n3-MIERCURI\n4-JOI\n5-VINERI\n6-SAMBATA\n7-DUMINICA\n";
     std::cin>>x;
@@ -33,7 +38,8 @@ void muzeu::program() {
         std::cout<< "Muzeul este deschis de la ora 08:00 pana la 22:00!\n";
 }
 
-void muzeu::cost_bilete() const {
+template <typename A, typename B>
+void muzeu<A,B>::cost_bilete() const {
     float cost;
     int x,y,g;
     std::cout<< "Cati oameni vor sa viziteze muzeul?\n";
@@ -53,12 +59,14 @@ void muzeu::cost_bilete() const {
     std::cout<< "Pretul total al biletelor este: " << cost <<"RON\n\n";
 }
 
-void muzeu::colectie_random() {
+template <typename A, typename B>
+void muzeu<A,B>::colectie_random() {
     int x = rand() % colectii.size();
     std::cout<< x << "\n" << colectii[x]<<"\n";
 }
 
-void muzeu::proces_licitatie(int cost_initial) {
+template <typename A, typename B>
+void muzeu<A,B>::proces_licitatie(int cost_initial) {
     int cost_lici;                  //pretul dupa ce creste la licitatie
     bool ultima_oferta = false;     //=true reprezinta ca ultimul pret a fost oferit de muzeu
     bool sfarsit = false;           //=true, se termina licitatia
@@ -98,7 +106,8 @@ void muzeu::proces_licitatie(int cost_initial) {
         std::cout<< "Muzeul nu are destui bani!" << "\n\n";
 }
 
-void muzeu::licitatii() {
+template <typename A, typename B>
+void muzeu<A,B>::licitatii() {
     std::cout << "\n\nINCEPUTUL LICITATIILOR\n"
     << "Bugetul initial este: " << buget << " RON\n\n";
 
@@ -113,8 +122,8 @@ void muzeu::licitatii() {
     <<"SFARSITUL LICITATIILOR\n\n";
 }
 
-void muzeu::buget_plus() {
+template <typename A, typename B>
+void muzeu<A,B>::buget_plus() {
     buget = buget + (rand() % 50 + 50) * 100;
     std::cout << "S-au adaugat bani la buget.\nBugetul este: " << buget << " RON\n";
 }
-

@@ -10,7 +10,7 @@
 void functie1(){
     srand(time(NULL));
 
-    muzeu M("Muzeul de Arta Universala", 20);
+    muzeu<int, int> M("Muzeul de Arta Universala", 20);
     M.setBilet(30);
     colectie C1{"Trecutul alb-negru", 101};
     colectie C2{"Arta contemporana", 102};
