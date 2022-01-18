@@ -1,8 +1,8 @@
 //
 //
 
-#ifndef PROIECT_POO_BUILDER_H
-#define PROIECT_POO_BUILDER_H
+#ifndef PROIECT_POO_DESEN_BUILDER_H
+#define PROIECT_POO_DESEN_BUILDER_H
 
 #include <iostream>
 #include <string>
@@ -16,8 +16,18 @@ class desen {
     std::string obiect;     // obiectul desenat
 
     friend class desen_builder;
+    virtual void print(std::ostream &os) const;
 
 public:
+    friend std::ostream &operator<<(std::ostream &os, const desen &d);
+
+    //getter pt toate variabilele
+    int getLungime() const;
+    int getLatime() const;
+    const std::string &getCuloarePr() const;
+    const std::string &getTipDesen() const;
+    const std::string &getObiect() const;
+
     desen() = default;
 };
 
@@ -36,4 +46,5 @@ public:
 };
 
 
-#endif //PROIECT_POO_BUILDER_H
+
+#endif //PROIECT_POO_DESEN_BUILDER_H

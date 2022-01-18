@@ -6,7 +6,7 @@
 #include "pictura.h"
 #include "sculptura.h"
 #include "erori.h"
-#include "builder.h"
+#include "desen_builder.h"
 
 void functie1(){
     srand(time(NULL));
@@ -36,9 +36,9 @@ void functie1(){
     M.adauga(C3);
 
     desen_builder x;
-    desen d = x.lungime(25).latime(10).culoare_pr("rosu").
+    desen d1 = x.lungime(25).latime(10).culoare_pr("rosu").
               tip_desen("peisaj").obiect("lac").build();
-    std::cout << d;
+    std::cout << d1;
 
 //    M.program();              //Afisaza programul muzeului intr-o anumita zi
 //    M.cost_bilete();          //Calculeaza pretul biletelor
