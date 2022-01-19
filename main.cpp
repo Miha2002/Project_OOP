@@ -41,8 +41,11 @@ void functie1(){
 //              tip_desen("peisaj").obiect("lac").build();
 //    std::cout << d1;
 
-    eveniment event = event_factory::ziua_mondiala_art();
-    std::cout << event;
+    eveniment event1 = event_factory::ziua_mondiala_art();
+    std::cout << event1 << "\n";
+
+    eveniment event2 = event_factory::istoria_artei();
+    std::cout << event2 << "\n";
 
 //    M.program();              //Afisaza programul muzeului intr-o anumita zi
 //    M.cost_bilete();          //Calculeaza pretul biletelor
