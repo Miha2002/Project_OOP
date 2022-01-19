@@ -4,9 +4,12 @@
 
 
 std::ostream &operator<<(std::ostream &os, const colectie &colectie) {
-    os << "titlu: " << colectie.titlu << "\ncod: " << colectie.cod << "\nopere: " << "\n";
-    for(const auto &opera_arta : colectie.opere)
-        os << "\t" << *opera_arta << "\n";
+    os << "titlu: " << colectie.titlu << "\ncod: " << colectie.cod << "\n";
+    if (colectie.opere.size()) {
+        os << "opere: " << "\n";
+        for (const auto &opera_arta: colectie.opere)
+            os << "\t" << *opera_arta << "\n";
+    }
     return os;
 }
 

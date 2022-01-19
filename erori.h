@@ -6,34 +6,39 @@
 
 #include <iostream>
 
-class eroare_opera : public std::runtime_error {
+class eroare : public std::runtime_error {
 public:
-    eroare_opera(const std::string& err);
+    eroare(const std::string& err);
 };
 
-class eroare_stil : public eroare_opera {
+class eroare_stil : public eroare {
 public:
     eroare_stil();
 };
 
-class eroare_an : public eroare_opera {
+class eroare_an : public eroare {
 public:
     eroare_an();
 };
 
-class eroare_marime : public eroare_opera {
+class eroare_marime : public eroare {
 public:
     eroare_marime();
 };
 
-class eroare_greutate : public eroare_opera {
+class eroare_greutate : public eroare {
 public:
     eroare_greutate();
 };
 
-class eroare_cautare : public eroare_opera {
+class eroare_cautare : public eroare {
 public:
     eroare_cautare();
+};
+
+class eroare_data : public eroare {
+public:
+    eroare_data();
 };
 
 

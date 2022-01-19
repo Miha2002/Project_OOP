@@ -7,6 +7,7 @@
 #include "sculptura.h"
 #include "erori.h"
 #include "desen_builder.h"
+#include "event_factory.h"
 
 void functie1(){
     srand(time(NULL));
@@ -35,10 +36,13 @@ void functie1(){
     M.adauga(C2);
     M.adauga(C3);
 
-    desen_builder x;
-    desen d1 = x.lungime(25).latime(10).culoare_pr("rosu").
-              tip_desen("peisaj").obiect("lac").build();
-    std::cout << d1;
+//    desen_builder x;
+//    atelier_desen d1 = x.lungime(25).latime(10).culoare_pr("rosu").
+//              tip_desen("peisaj").obiect("lac").build();
+//    std::cout << d1;
+
+    eveniment event = event_factory::ziua_mondiala_art();
+    std::cout << event;
 
 //    M.program();              //Afisaza programul muzeului intr-o anumita zi
 //    M.cost_bilete();          //Calculeaza pretul biletelor
@@ -58,7 +62,7 @@ int main () {
     try {
         functie1();
     }
-    catch (eroare_opera &error) {
+    catch (eroare &error) {
         std::cout << error.what() << "\n";
     }
     catch (std::exception& e){

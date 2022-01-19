@@ -5,35 +5,35 @@
 #include "desen_builder.h"
 #include "erori.h"
 
-void desen::print(std::ostream &os) const {
+void atelier_desen::print(std::ostream &os) const {
     os << "Canvasul folosit are dimensiunile " << lungime << "x" << latime << ". Desenul facut de dvs. este un " << tip_desen << " al unui/unei "
     << obiect << ".\nCuloarea predominanta a desenului este " << culoare_pr << ".\n";
 }
 
-std::ostream &operator<<(std::ostream &os, const desen &d)
+std::ostream &operator<<(std::ostream &os, const atelier_desen &d)
 {
     os.precision(2);
     d.print(os);
     return os;
 }
 
-int desen::getLungime() const {
+int atelier_desen::getLungime() const {
     return lungime;
 }
 
-int desen::getLatime() const {
+int atelier_desen::getLatime() const {
     return latime;
 }
 
-const std::string &desen::getCuloarePr() const {
+const std::string &atelier_desen::getCuloarePr() const {
     return culoare_pr;
 }
 
-const std::string &desen::getTipDesen() const {
+const std::string &atelier_desen::getTipDesen() const {
     return tip_desen;
 }
 
-const std::string &desen::getObiect() const {
+const std::string &atelier_desen::getObiect() const {
     return obiect;
 }
 
@@ -66,6 +66,6 @@ desen_builder &desen_builder::obiect(const std::string &ob) {
     return *this;
 }
 
-desen desen_builder::build() {
+atelier_desen desen_builder::build() {
     return d;
 }

@@ -7,8 +7,10 @@
 #include <iostream>
 #include <string>
 
+//builder-ul pt clasa desen reprezinta un fel de atelier pt vizitatorii muzeului
+//unde pot sa faca propriile desene
 
-class desen {
+class atelier_desen {
     int lungime;
     int latime;             //cm
     std::string culoare_pr; //culoarea predominanta in opera
@@ -19,7 +21,7 @@ class desen {
     virtual void print(std::ostream &os) const;
 
 public:
-    friend std::ostream &operator<<(std::ostream &os, const desen &d);
+    friend std::ostream &operator<<(std::ostream &os, const atelier_desen &d);
 
     //getter pt toate variabilele
     int getLungime() const;
@@ -28,11 +30,11 @@ public:
     const std::string &getTipDesen() const;
     const std::string &getObiect() const;
 
-    desen() = default;
+    atelier_desen() = default;
 };
 
 class desen_builder {
-    desen d;
+    atelier_desen d;
 public:
     desen_builder() = default;
 
@@ -42,7 +44,7 @@ public:
     desen_builder& tip_desen(const std::string& tip);
     desen_builder& obiect(const std::string& ob);
 
-    desen build();
+    atelier_desen build();
 };
 
 
