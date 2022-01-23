@@ -46,5 +46,10 @@ public:
     eroare_zi();
 };
 
+class eroare_luni : public eroare {
+public:
+    eroare_luni();
+};
+
 
 #endif //PROIECT_POO_ERORI_H

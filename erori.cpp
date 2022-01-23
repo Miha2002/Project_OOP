@@ -18,4 +18,6 @@ eroare_cautare::eroare_cautare() : eroare("Opera cu acest titlul nu a fost gasit
 
 eroare_data::eroare_data() : eroare("Data este invalida"){}
 
-eroare_zi::eroare_zi() : eroare("Muzeul este inchis in zilele de luni"){}
+eroare_luni::eroare_luni() : eroare("Muzeul este inchis in zilele de luni"){}
+
+eroare_zi::eroare_zi() : eroare("Ziua este invalida"){}

@@ -37,9 +37,12 @@ void muzeu<A,B>::program() {
     std::cout<< "In ce zi doriti sa vizitati?\nPrecizati ziua (2-7)";
     std::cin>>x;
     if(x==1)
-        throw eroare_zi();
+        throw eroare_luni();
     else
-        std::cout<< "Muzeul este deschis de la ora 08:00 pana la 22:00!\n";
+        if (x<1 || x>7)
+            throw eroare_zi();
+        else
+            std::cout<< "Muzeul este deschis de la ora 08:00 pana la 22:00!\n";
 }
 
 template <typename A, typename B>
