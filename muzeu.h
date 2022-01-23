@@ -7,6 +7,7 @@
 #include <iostream>
 #include <vector>
 #include "colectie.h"
+#include "erori.h"
 
 template <typename A, typename B>
 class muzeu {

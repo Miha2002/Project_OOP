@@ -34,10 +34,10 @@ enum zile {
 template <typename A, typename B>
 void muzeu<A,B>::program() {
     int x;
-    std::cout<< "In ce zi doriti sa vizitati?\nPrecizati ziua (1-7)";
+    std::cout<< "In ce zi doriti sa vizitati?\nPrecizati ziua (2-7)";
     std::cin>>x;
     if(x==1)
-        std::cout<< "Muzeul este inchis in aceasta zi!\n";
+        throw eroare_zi();
     else
         std::cout<< "Muzeul este deschis de la ora 08:00 pana la 22:00!\n";
 }

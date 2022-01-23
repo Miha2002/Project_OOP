@@ -41,5 +41,10 @@ public:
     eroare_data();
 };
 
+class eroare_zi : public eroare {
+public:
+    eroare_zi();
+};
+
 
 #endif //PROIECT_POO_ERORI_H

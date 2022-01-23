@@ -17,3 +17,5 @@ eroare_greutate::eroare_greutate() : eroare("Sculptura este prea grea"){}
 eroare_cautare::eroare_cautare() : eroare("Opera cu acest titlul nu a fost gasita"){}
 
 eroare_data::eroare_data() : eroare("Data este invalida"){}
+
+eroare_zi::eroare_zi() : eroare("Muzeul este inchis in zilele de luni"){}
