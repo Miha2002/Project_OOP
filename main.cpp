@@ -13,17 +13,23 @@ void functie1(){
     srand(time(NULL));
 
     muzeu<int, int> M("Muzeul de Arta Universala", 20);
+    muzeu<float, float> M2("Muzeul de Arta Contemporana", 10);
     M.setBilet(30);
     colectie C1{"Trecutul alb-negru", 101};
     colectie C2{"Arta contemporana", 102};
     colectie C3{"Adevarul despre arta", 103};
 
+    M2.setBilet(15);
+    colectie C4{"Intelesul adevarat al vietii", 105};
+
     pictura p1{"Camp cu maci", "Claude Monet", "impresionism", 1870, true, "ulei", 50, 65};
     pictura p2{"Floarea soarelui", "Vincent Van Gogh", "post-impresionism", 1888, true, "ulei", 92, 73};
     pictura p3{"Flumequine", "Damien Hirst", "contemporan", 2007, false, "acrilic", 140, 108};
+    pictura p4{"Portocaliu,rosu,galben", "Mark Rothko", "contemporan", 1961, true, "acrilic", 236, 206};
 
     sculptura s1{"Pieta", "Michelangelo Buonarroti", "renascentism", 1499, false, "marmura", 3040, 1.95};
     sculptura s2{"Cainele balon", "Jeff Koons", "contemporan", 1993, true, "otel", 1000, 3.10};
+    sculptura s3{"Expansion", "Paige Bradley", "contemporan", 2004, true, "lut", 1800, 1.93};
 
     C1.adauga(p1);
     C1.adauga(p2);
@@ -32,9 +38,13 @@ void functie1(){
     C2.adauga(p3);
     C2.adauga(s2);
 
+    C4.adauga(p4);
+    C4.adauga(s3);
+
     M.adauga(C1);
     M.adauga(C2);
     M.adauga(C3);
+    M2.adauga(C4);
 
 //    desen_builder x;
 //    atelier_desen d1 = x.lungime(25).latime(10).culoare_pr("rosu").
@@ -54,6 +64,8 @@ void functie1(){
 //    M.licitatii();            //Simuleaza o licitatie - limitata la 12 opere achizitionate
 //    M.buget_plus();           //Adauga o suma random la bugetul muzeului
 //    M.licitatii();            //Licitatie 2
+
+//    M2.licitatii();
 
 //    p1.descriere();
 
