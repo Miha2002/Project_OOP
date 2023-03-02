@@ -4,9 +4,8 @@
 - An application for an art muzeum, showcasing the artworks and collections.
 
 
-## Tema 1
+## Part 1
 
-#### Cerințe
 - [x] definirea a minim 3 clase
   - [x] 
   - [x] 
@@ -24,9 +23,8 @@
 - [ ] după ce e gata prima temă, tag de `git`: de exemplu `v0.1`
 - [ ] GitHub Actions sau alt serviciu de CI (Continuous Integration) - exemplu [aici](https://github.com/mcmarius/demo-poo/blob/master/.github/workflows/cmake.yml) (a se vedea și `CMakeLists.txt` din același repo pt compiler flags)
 
-## Tema 2
+## Part 2
 
-#### Cerințe
 - [ ] separarea codului din clase în `.h` (sau `.hpp`) și `.cpp`
 - [ ] moșteniri
   - [ ] funcții virtuale (pure)
@@ -42,9 +40,8 @@
 - [ ] la fel ca mai sus, apelarea tuturor funcțiilor publice din `main`
 - [ ] încă un tag de `git`: de exemplu `v0.2`
 
-## Tema 3
+## Part 3
 
-#### Cerințe
 - [ ] 2 design patterns
 - [ ] funcții și clase șablon (`template`)
 - [ ] un ultim (?) tag de `git`: de exemplu `v0.3` sau `v1.0`
