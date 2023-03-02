@@ -7,14 +7,14 @@
 ## Tema 1
 
 #### Cerințe
-- [ ] definirea a minim 3 clase
-  - [ ] <clasa 1>
-  - [ ] <clasa 2>
-  - [ ] <clasa 3>
-- [ ] constructori de inițializare
-- [ ] constructor de copiere sau cc (pt minim o clasă)
-- [ ] `operator=` sau op= (pt minim o clasă, aceeași unde s-a făcut cc și destructor)
-- [ ] destructor (pt minim o clasă, aceeași unde s-a făcut cc și op=)
+- [x] definirea a minim 3 clase
+  - [x] 
+  - [x] 
+  - [x] 
+- [x] constructori de inițializare
+- [x] constructor de copiere sau cc (pt minim o clasă)
+- [x] `operator=` sau op= (pt minim o clasă, aceeași unde s-a făcut cc și destructor)
+- [x] destructor (pt minim o clasă, aceeași unde s-a făcut cc și op=)
 - [ ] `operator<<` pt toate clasele
 - [ ] cât mai multe `const`
 - [ ] implementarea a minim 2 funcții publice pentru funcționalități specifice temei alese (nu se iau în considerare citiri/afișări/getteri/setteri)
@@ -25,11 +25,6 @@
 - [ ] GitHub Actions sau alt serviciu de CI (Continuous Integration) - exemplu [aici](https://github.com/mcmarius/demo-poo/blob/master/.github/workflows/cmake.yml) (a se vedea și `CMakeLists.txt` din același repo pt compiler flags)
 
 ## Tema 2
-
-#### Deadlines semestrul 1
-- săptămâna 7 (20 noiembrie): progres parțial
-- **săptămâna 8 (27 noiembrie): tema 2 gata**
-- săptămâna 9 (4 decembrie): (eventuale) modificări în urma feedback-ului
 
 #### Cerințe
 - [ ] separarea codului din clase în `.h` (sau `.hpp`) și `.cpp`
@@ -48,11 +43,6 @@
 - [ ] încă un tag de `git`: de exemplu `v0.2`
 
 ## Tema 3
-
-#### Deadlines semestrul 1
-- săptămâna 10 (11 decembrie): progres parțial
-- **săptămâna 11 (18 decembrie): tema 3 gata**
-- săptămâna 12 (22-29 decembrie): (eventuale) modificări în urma feedback-ului
 
 #### Cerințe
 - [ ] 2 design patterns
