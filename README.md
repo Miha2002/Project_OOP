@@ -1,17 +1,10 @@
-# OOP Template
+# OOP Art Museum 
 
-### Tema 0
+- The project is structured similar to a database for an art museum
+- An application for an art muzeum, showcasing the artworks and collections.
 
-- [ ] Muzeu de arta
-- [ ] Aplicatia unui muzeu de arta, prezentand colectiile si operele de arta ale acestuia.
-- [ ] actualizat `.gitignore` dacă nu sunt ignorate fișierele (binare) generate de editor/IDE; puteți folosi https://gitignore.io
 
 ## Tema 1
-
-#### Deadlines semestrul 1
-- săptămâna 3 (23 octombrie): stabilirea claselor și implementarea parțială a acestora
-- **săptămâna 4 (30 octombrie): tema 1 gata**
-- săptămâna 5 (6 noiembrie): (eventuale) modificări în urma feedback-ului
 
 #### Cerințe
 - [ ] definirea a minim 3 clase
@@ -66,6 +59,3 @@
 - [ ] funcții și clase șablon (`template`)
 - [ ] un ultim (?) tag de `git`: de exemplu `v0.3` sau `v1.0`
 
-## Resurse
-
-<Adăugați aici sau într-un markdown separat resurse de unde v-ați inspirat, dacă le considerați relevante.>
